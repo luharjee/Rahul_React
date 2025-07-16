@@ -4,9 +4,11 @@ export function useToggle() {
   const [value, setValue] = useState();
   function toggleVal(val) {
     if (typeof val != "boolean") {
-      setValue(!val);
+      setValue(!value);
     } else {
-      setValue(val);
+      setValue(value);
     }
   }
+
+  return [value, toggleVal];
 }
