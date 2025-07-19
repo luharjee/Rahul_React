@@ -10,15 +10,13 @@ import wind_icon from "../assets/wind.png";
 import humidity_icon from "../assets/humidity.png";
 
 const WeatherBackground = () => {
-
   const allIcon = {
-    "01d" : clear_icon,
-    "01n" : clear_icon,
-    "02d" : cloud_icon,
-    
-  }
+    "01d": clear_icon,
+    "01n": clear_icon,
+    "02d": cloud_icon,
+  };
 
-  const [weatherData, setWeatherData] = useState(false)
+  const [weatherData, setWeatherData] = useState(false);
 
   const search = async () => {
     try {
@@ -28,11 +26,10 @@ const WeatherBackground = () => {
       console.log(data);
       setWeatherData({
         humidity: data.main.humidity,
-        windSpeed : data.wind.speed,
+        windSpeed: data.wind.speed,
         temperature: Math.floor(data.main.temp),
         location: data.name,
-        icon: 
-      })
+      });
     } catch (error) {}
   };
 
