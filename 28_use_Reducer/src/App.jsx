@@ -3,6 +3,7 @@ import "./App.css";
 import UseReducer from "./UseReducer";
 
 function App() {
+  
   const initialState = {
     name: "",
     email: "",

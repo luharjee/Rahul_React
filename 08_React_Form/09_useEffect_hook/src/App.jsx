@@ -6,7 +6,13 @@ function App() {
   const [state, setState] = useState(true);
   return (
     <>
-      <button onClick={() => setState(!state)}>Toggle</button>
+      <button
+        onClick={() => {
+          setState(!state);
+        }}
+      >
+        Toggle
+      </button>
       {state && <UseEffect />}
     </>
   );

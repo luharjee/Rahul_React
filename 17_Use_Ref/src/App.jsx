@@ -6,6 +6,8 @@ function App() {
 
   let timerRef = useRef(null);
 
+  let btnRef = useRef(null);
+
   const startTimer = () => {
     timerRef.current = setInterval(() => {
       setTime((t) => t + 1);
@@ -43,17 +45,29 @@ function App() {
   //   console.log(btnRef.current);
   // };
 
+  const changeColor = () => {
+    btnRef.current.style.backgroundColor = "brown";
+  };
+
   return (
     <>
       <div>
         <h1>StopWatch : {time} seconds</h1>
-        <button onClick={startTimer}>Start</button>
+        <button ref={btnRef} onClick={startTimer}>
+          Start
+        </button>
         <br />
         <br />
         <button onClick={stopTimer}>Stop</button>
         <br />
         <br />
-        <button onClick={resetTimer}>Reset</button>
+        <button
+          onClick={() => {
+            resetTimer(), changeColor();
+          }}
+        >
+          Reset
+        </button>
       </div>
       {/* <h1>Kaka Shree learning Use Ref Hook in React</h1>
       <h2>Count : {count}</h2>

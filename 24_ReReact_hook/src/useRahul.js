@@ -5,7 +5,7 @@ export function useRahul() {
 
   useEffect(() => {
     console.log("I am working for my father and uncle");
-    setName("Rosi");
+    setName("Rosi, Kali ");
   }, []);
 
   return name;

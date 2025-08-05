@@ -9,8 +9,7 @@ const Kaka = () => {
 
   const expensiveWork = (num) => {
     console.log("India");
-    for (let i = 1; i <= 1234432234; i++) {}
-    return num * 4;
+    for (let i = 1; i <= 1234432234; i++) return num * 4;
   };
 
   const value = useMemo(() => expensiveWork(23), []);
